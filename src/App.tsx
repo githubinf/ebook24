@@ -37,15 +37,15 @@ export default function App() {
               <span className="text-brand-white">24 HORAS</span>
             </h1>
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-              animate={{ opacity: 1, scale: 1, rotate: -2 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="shrink-0 max-w-[300px] md:max-w-[400px] shadow-2xl"
+              className="shrink-0 max-w-[300px] md:max-w-[400px]"
             >
               <img 
                 src="https://i.postimg.cc/59hrpXW9/ebook-en-24-horas-no-ficcion.png" 
                 alt="Portada Ebook en 24 Horas" 
-                className="w-full h-auto border-8 border-brand-black"
+                className="w-full h-auto"
                 referrerPolicy="no-referrer"
               />
             </motion.div>
