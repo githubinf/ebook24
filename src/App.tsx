@@ -19,6 +19,17 @@ import {
   Award
 } from "lucide-react";
 
+const PAYMENT_URL = "https://fcofrancis.pay.clickbank.net/?cbitems=12";
+
+const PaymentButton = ({ className = "" }: { className?: string }) => (
+  <a 
+    href="#comprar"
+    className={`inline-block bg-brand-black text-brand-white px-10 py-5 text-xl font-bold uppercase tracking-tighter hover:scale-105 transition-transform ${className}`}
+  >
+    Adquirir el método por $9,99
+  </a>
+);
+
 export default function App() {
   return (
     <div className="min-h-screen selection:bg-brand-black selection:text-brand-yellow">
@@ -54,10 +65,10 @@ export default function App() {
             Escribe y publica tu primer libro de no ficción en menos de un día. Sin experiencia previa, usando herramientas gratuitas e inteligencia artificial.
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <a href="#comprar" className="btn-primary flex items-center gap-3 group">
-              Comenzar ahora <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+            <PaymentButton />
+            <a href="#comprar" className="text-lg font-semibold text-brand-black underline underline-offset-4">
+              Ver detalles del método
             </a>
-            <p className="text-lg font-semibold text-brand-black">Precio exclusivo: $9,99</p>
           </div>
         </motion.div>
 
@@ -185,7 +196,7 @@ export default function App() {
               <p className="text-xl text-brand-gray/80 mb-12 leading-relaxed">
                 Este no es un libro de teoría literaria. No es una obra de inspiración abstracta. Es un manual de operaciones tácticas diseñado para que ejecutes, no para que sueñes.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-6 mb-12">
                 {[
                   "Un libro de no ficción de 5.000 a 7.000 palabras.",
                   "Portada profesional diseñada por ti en minutos.",
@@ -198,6 +209,9 @@ export default function App() {
                     <span className="text-lg">{item}</span>
                   </div>
                 ))}
+              </div>
+              <div className="flex justify-center md:justify-start">
+                <PaymentButton className="bg-brand-yellow text-brand-black" />
               </div>
             </div>
             <div className="bg-brand-yellow p-12 rounded-none transform rotate-2">
@@ -333,9 +347,10 @@ export default function App() {
             </div>
           </div>
         </div>
+        <div className="mt-20 text-center">
+          <PaymentButton />
+        </div>
       </section>
-
-      {/* SECCIÓN: LA ANATOMÍA DE UN ÉXITO (NUEVA) */}
       <section className="py-32 px-6 bg-brand-black text-brand-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">La Anatomía de un Libro que <span className="text-brand-yellow">Vende</span></h2>
@@ -555,11 +570,12 @@ export default function App() {
           <p className="text-2xl font-light mb-12 leading-relaxed">
             Este libro está diseñado para ser usado, no solo leído. Si sigues el método paso a paso y al finalizar las veinticuatro horas no tienes tu libro publicado en Amazon, te devuelvo cada centavo de tu inversión.
           </p>
-          <div className="prose prose-xl text-brand-black/70 mx-auto">
+          <div className="prose prose-xl text-brand-black/70 mx-auto mb-12">
             <p>
               Sin preguntas incómodas. Sin condiciones ocultas. Sin procesos complicados. Solo envíame un correo electrónico dentro de los primeros treinta días tras tu compra y procesaré el reembolso completo de inmediato. Mi compromiso es con tu éxito como autor, no con tu dinero.
             </p>
           </div>
+          <PaymentButton />
         </div>
       </section>
 
@@ -745,12 +761,17 @@ export default function App() {
               Llevas años posponiendo este sueño. Las próximas veinticuatro horas pueden ser las que cambien tu carrera para siempre. ¿Te atreves a ser autor?
             </p>
             
-            <div className="bg-brand-yellow text-brand-black p-12 mb-12 inline-block">
-              <p className="text-xl uppercase tracking-widest mb-2 font-bold">Inversión única</p>
-              <p className="text-7xl font-black mb-6">$9,99</p>
-              <button className="bg-brand-black text-brand-white px-12 py-6 text-2xl font-bold uppercase tracking-tighter hover:scale-105 transition-transform">
-                Adquirir el método completo
-              </button>
+            <div className="flex justify-center mb-12">
+              <div className="bg-brand-yellow text-brand-black p-12 inline-block">
+                <p className="text-xl uppercase tracking-widest mb-2 font-bold">Inversión única</p>
+                <p className="text-7xl font-black mb-6">$9,99</p>
+                <a 
+                  href={PAYMENT_URL}
+                  className="inline-block bg-brand-black text-brand-white px-12 py-6 text-2xl font-bold uppercase tracking-tighter hover:scale-105 transition-transform"
+                >
+                  Adquirir el método completo
+                </a>
+              </div>
             </div>
 
             <div className="flex justify-center items-center gap-8 text-brand-gray/40">
