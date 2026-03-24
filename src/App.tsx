@@ -46,7 +46,7 @@ export default function App() {
         >
           <span className="meta-label text-brand-black/60 mb-8 block">MÉTODO DE ALTO RENDIMIENTO</span>
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mb-12">
-            <h1 className="editorial-heading text-brand-black text-left lg:text-right">
+            <h1 className="editorial-heading text-brand-black text-left lg:text-right text-5xl md:text-7xl">
               Ebook en <br />
               <span className="text-brand-white">24 HORAS</span>
             </h1>
@@ -61,6 +61,8 @@ export default function App() {
                 alt="Portada Ebook en 24 Horas" 
                 className="w-full h-auto"
                 referrerPolicy="no-referrer"
+                fetchPriority="high"
+                decoding="async"
               />
             </motion.div>
           </div>
@@ -90,7 +92,7 @@ export default function App() {
       {/* SECCIÓN: EL PODER DE LA AUTORÍA (NUEVA) */}
       <section className="py-32 px-6 bg-brand-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-bold mb-12 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 leading-tight tracking-tight">
             El Poder Invisible de ser <span className="text-brand-gold">Autor</span>
           </h2>
           <div className="prose prose-xl text-brand-black/70 space-y-8 leading-relaxed">
@@ -134,7 +136,7 @@ export default function App() {
       {/* SECCIÓN: EL MANIFIESTO DEL AUTOR MODERNO (NUEVA) */}
       <section className="py-32 px-6 bg-brand-yellow text-brand-black">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-bold mb-12 leading-none uppercase tracking-tighter">
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 leading-none uppercase tracking-tighter">
             El Manifiesto del <br /> Autor Moderno
           </h2>
           <div className="prose prose-2xl text-brand-black/80 space-y-8 font-light leading-relaxed">
@@ -166,7 +168,7 @@ export default function App() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight mb-12">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-12">
               ¿Llevas meses queriendo escribir un libro pero nunca encuentras el momento?
             </h2>
             <div className="prose prose-2xl text-brand-black/70 leading-relaxed space-y-8 font-light">
@@ -199,7 +201,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
               <span className="meta-label text-brand-yellow mb-6 block">LA TRANSFORMACIÓN</span>
-              <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
                 De la idea a la <span className="italic">autoría</span> en un solo día.
               </h2>
               <p className="text-xl text-brand-gray/80 mb-12 leading-relaxed">
@@ -247,7 +249,7 @@ export default function App() {
       {/* SECCIÓN: EL MÉTODO DETALLADO (EXPANDIDO) */}
       <section className="py-32 px-6 bg-brand-gray/30">
         <div className="max-w-5xl mx-auto text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-bold mb-8">La estructura del éxito</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">La estructura del éxito</h2>
           <p className="text-xl text-brand-black/60 max-w-3xl mx-auto">
             El método está dividido en seis bloques de trabajo intensivo. No es una lectura pasiva; es un proceso de construcción en tiempo real.
           </p>
@@ -423,7 +425,7 @@ export default function App() {
       {/* SECCIÓN: SÍNDROME DEL IMPOSTOR (NUEVA) */}
       <section className="py-32 px-6 bg-brand-yellow text-brand-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-bold mb-12 uppercase tracking-tighter">Matar al Impostor</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-12 uppercase tracking-tighter">Matar al Impostor</h2>
           <div className="prose prose-2xl text-brand-black/80 space-y-8 text-left font-light">
             <p>
               "¿Quién soy yo para escribir un libro?". Esa es la pregunta que ha matado más sueños que cualquier falta de talento. El síndrome del impostor es esa voz interna que te dice que no sabes lo suficiente, que otros ya lo han dicho mejor o que nadie querrá leerte.
@@ -465,7 +467,7 @@ export default function App() {
       {/* SECCIÓN: POR QUÉ FUNCIONA (PSICOLOGÍA Y MÉTODO) */}
       <section className="py-32 px-6 bg-brand-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-bold mb-16 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold mb-16 leading-tight tracking-tight">
             ¿Por qué este método funciona donde otros <span className="text-brand-gold">fracasan</span>?
           </h2>
           <div className="space-y-16">
@@ -504,7 +506,7 @@ export default function App() {
       <section className="py-32 px-6 bg-brand-black text-brand-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-bold mb-8">Mucho más que un libro</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Mucho más que un libro</h2>
             <p className="text-xl text-brand-gray/60 max-w-3xl mx-auto">
               Publicar tu primer ebook en 24 horas es solo el comienzo de una nueva etapa en tu vida profesional y personal.
             </p>
@@ -537,7 +539,7 @@ export default function App() {
       {/* SECCIÓN: TESTIMONIOS (SIMULADOS PERO PROFESIONALES) */}
       <section className="bg-brand-black text-brand-white py-32 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl md:text-6xl font-bold mb-20 text-center">Resultados reales de autores reales</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-20 text-center tracking-tight">Resultados reales de autores reales</h2>
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
@@ -575,7 +577,7 @@ export default function App() {
       <section className="py-32 px-6 bg-brand-yellow text-brand-black">
         <div className="max-w-4xl mx-auto text-center">
           <ShieldCheck size={80} className="mx-auto mb-8" />
-          <h2 className="text-5xl md:text-7xl font-bold mb-8">Garantía de 30 días</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight">Garantía de 30 días</h2>
           <p className="text-2xl font-light mb-12 leading-relaxed">
             Este libro está diseñado para ser usado, no solo leído. Si sigues el método paso a paso y al finalizar las veinticuatro horas no tienes tu libro publicado en Amazon, te devuelvo cada centavo de tu inversión.
           </p>
@@ -635,7 +637,7 @@ export default function App() {
       {/* SECCIÓN: PREGUNTAS FRECUENTES (FAQ) */}
       <section className="py-32 px-6 bg-brand-gray/20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-bold mb-16 text-center">Preguntas Frecuentes</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center tracking-tight">Preguntas Frecuentes</h2>
           <div className="space-y-12">
             <div>
               <h4 className="text-2xl font-bold mb-4 flex items-center gap-3">
@@ -763,7 +765,7 @@ export default function App() {
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-6xl md:text-8xl font-bold mb-12 leading-none">
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 leading-none tracking-tighter">
               EL MOMENTO ES <span className="text-brand-yellow">AHORA</span>.
             </h2>
             <p className="text-2xl text-brand-gray/70 mb-16 max-w-2xl mx-auto">
@@ -800,7 +802,7 @@ export default function App() {
       {/* FOOTER MINIMALISTA */}
       <footer className="bg-brand-black border-t border-brand-white/5 py-12 px-6 text-center">
         <p className="text-brand-gray/30 text-sm tracking-widest uppercase">
-          © 2026 Ebook en 24 Horas. Todos los derechos reservados. <br />
+          © Francisco González. Todos los derechos reservados. <br />
           Desarrollado para autores de alto rendimiento.
         </p>
       </footer>
