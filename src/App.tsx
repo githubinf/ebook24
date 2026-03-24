@@ -31,10 +31,25 @@ export default function App() {
           className="max-w-5xl z-10"
         >
           <span className="meta-label text-brand-black/60 mb-8 block">MÉTODO DE ALTO RENDIMIENTO</span>
-          <h1 className="editorial-heading text-brand-black mb-12">
-            Ebook en <br />
-            <span className="text-brand-white">24 HORAS</span>
-          </h1>
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-12 mb-12">
+            <h1 className="editorial-heading text-brand-black text-left lg:text-right">
+              Ebook en <br />
+              <span className="text-brand-white">24 HORAS</span>
+            </h1>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+              animate={{ opacity: 1, scale: 1, rotate: -2 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="shrink-0 max-w-[300px] md:max-w-[400px] shadow-2xl"
+            >
+              <img 
+                src="https://i.postimg.cc/59hrpXW9/ebook-en-24-horas-no-ficcion.png" 
+                alt="Portada Ebook en 24 Horas" 
+                className="w-full h-auto border-8 border-brand-black"
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
+          </div>
           <p className="text-2xl md:text-3xl font-light text-brand-black/80 max-w-3xl mx-auto mb-12 leading-relaxed">
             Escribe y publica tu primer libro de no ficción en menos de un día. Sin experiencia previa, usando herramientas gratuitas e inteligencia artificial.
           </p>
