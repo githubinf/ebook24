@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;600;800&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  --color-brand-yellow: #F4C430;
+  --color-brand-gold: #E0A800;
+  --color-brand-black: #000000;
+  --color-brand-white: #FFFFFF;
+  --color-brand-gray: #E5E5E5;
+}
+
+body {
+  @apply font-sans bg-brand-white text-brand-black antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-serif;
+}
+
+.editorial-heading {
+  @apply text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase;
+}
+
+.meta-label {
+  @apply text-sm font-bold uppercase tracking-[0.3em] mb-4 block;
+}
+
+.section-divider {
+  @apply border-t border-brand-black/10 my-12;
+}
+
+.btn-primary {
+  @apply bg-brand-black text-brand-white px-8 py-4 text-xl font-bold uppercase tracking-widest hover:bg-brand-black/90 transition-all duration-300;
+}
+
+.highlight-yellow {
+  @apply bg-brand-yellow px-2;
+}
+
+/* Custom scrollbar for a refined look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brand-gray;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-black;
+}
