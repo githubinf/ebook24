@@ -12,6 +12,10 @@
   --color-brand-gray: #E5E5E5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply font-sans bg-brand-white text-brand-black antialiased;
 }

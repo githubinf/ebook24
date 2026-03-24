@@ -22,12 +22,15 @@ import {
 const PAYMENT_URL = "https://fcofrancis.pay.clickbank.net/?cbitems=12";
 
 const PaymentButton = ({ className = "" }: { className?: string }) => (
-  <a 
-    href="#comprar"
-    className={`inline-block bg-brand-black text-brand-white px-10 py-5 text-xl font-bold uppercase tracking-tighter hover:scale-105 transition-transform ${className}`}
+  <button 
+    onClick={() => {
+      const element = document.getElementById('comprar');
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }}
+    className={`inline-block bg-brand-black text-brand-white px-10 py-5 text-xl font-bold uppercase tracking-tighter hover:scale-105 transition-transform cursor-pointer ${className}`}
   >
     Adquirir el método por $9,99
-  </a>
+  </button>
 );
 
 export default function App() {
@@ -51,7 +54,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="shrink-0 max-w-[300px] md:max-w-[400px]"
+              className="shrink-0 max-w-[200px] md:max-w-[266px]"
             >
               <img 
                 src="https://i.postimg.cc/59hrpXW9/ebook-en-24-horas-no-ficcion.png" 
@@ -66,9 +69,15 @@ export default function App() {
           </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
             <PaymentButton />
-            <a href="#comprar" className="text-lg font-semibold text-brand-black underline underline-offset-4">
+            <button 
+              onClick={() => {
+                const element = document.getElementById('comprar');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="text-lg font-semibold text-brand-black underline underline-offset-4 cursor-pointer"
+            >
               Ver detalles del método
-            </a>
+            </button>
           </div>
         </motion.div>
 
@@ -747,7 +756,7 @@ export default function App() {
       </section>
 
       {/* SECCIÓN: CIERRE Y CTA FINAL */}
-      <section id="comprar" className="bg-brand-black text-brand-white py-40 px-6 text-center">
+      <section className="bg-brand-black text-brand-white min-h-screen flex items-center justify-center px-6 py-20 text-center">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -761,7 +770,7 @@ export default function App() {
               Llevas años posponiendo este sueño. Las próximas veinticuatro horas pueden ser las que cambien tu carrera para siempre. ¿Te atreves a ser autor?
             </p>
             
-            <div className="flex justify-center mb-12">
+            <div id="comprar" className="flex justify-center mb-12 scroll-mt-[20vh]">
               <div className="bg-brand-yellow text-brand-black p-12 inline-block">
                 <p className="text-xl uppercase tracking-widest mb-2 font-bold">Inversión única</p>
                 <p className="text-7xl font-black mb-6">$9,99</p>
